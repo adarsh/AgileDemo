@@ -17,10 +17,14 @@
   <div id="columns">
 
     <div id="side">
-      <a href="http://www....">Home</a><br />
-      <a href="http://www..../faq">Questions</a><br />
-      <a href="http://www..../news">News</a><br />
-      <a href="http://www..../contact">Contact</a><br />
+      <div id="cart">
+        <%= render @cart %>
+      </div>      
+      
+      <%= link_to 'Home', :controller => "store", :action => "index" %><br />
+      <%= link_to 'Questions', :controller => "store", :action => "index" %><br />
+      <%= link_to 'News', :controller => "store", :action => "index" %><br />
+      <%= link_to 'Contact', :controller => "store", :action => "index" %><br />
       <br />
       <%= Date.current.strftime("%m / %d / %Y") %>
     </div>
